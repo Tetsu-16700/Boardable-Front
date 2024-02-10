@@ -66,7 +66,7 @@ function HomeListOrganism() {
           ""
         )}
       </div>
-      ¨{/* iterar */}
+      {/* iterar */}
       {boards.map((board, index) => (
         <div
           key={index}
