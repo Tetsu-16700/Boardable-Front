@@ -13,7 +13,6 @@ export function ToastProvider({ children }) {
   //   eventos
   function setErrorToast(message) {
     setToastInfo({ ...toastInfo, error: true, message });
-
     setTimeout(() => {
       setToastInfo({ ...toastInfo, error: false, message: "" });
     }, 2000);
