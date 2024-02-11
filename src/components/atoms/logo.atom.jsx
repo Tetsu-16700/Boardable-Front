@@ -1,5 +1,6 @@
 function LogoAtom({ size = "md" }) {
   return (
+    
     <span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
