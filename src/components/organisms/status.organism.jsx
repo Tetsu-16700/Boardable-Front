@@ -6,13 +6,11 @@ import PropTypes from "prop-types";
 
 function BoardListOrganism({ id }) {
   const [dataStatus, setDataStatus] = useState([]);
-
   const [newTitle, setNewTitle] = useState("");
 
   async function handleCreateList() {
     try {
       if (newTitle === "") {
-        // Validación para asegurar que el título no esté vacío o solo contenga espacios en blanco
         alert("Please enter title");
       } else {
         const headers = {
@@ -77,8 +75,9 @@ function BoardListOrganism({ id }) {
     </main>
   );
 }
+
 BoardListOrganism.propTypes = {
-  id: PropTypes.string.isRequired, // Especifica que id debe ser una cadena y es requerido
+  id: PropTypes.string.isRequired,
 };
 
 export default BoardListOrganism;

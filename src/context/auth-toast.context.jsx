@@ -10,15 +10,20 @@ export function ToastProvider({ children }) {
     error: false,
     message: "",
   });
+
   //   eventos
   function setErrorToast(message) {
     setToastInfo({ ...toastInfo, error: true, message });
+
     setTimeout(() => {
       setToastInfo({ ...toastInfo, error: false, message: "" });
     }, 2000);
   }
+
   return (
-    <ToastContext.Provider value={{ setErrorToast: setErrorToast, toastInfo }}>
+    <ToastContext.Provider
+      value={{ setErrorToast: setErrorToast, toastInfo: toastInfo }}
+    >
       {children}
     </ToastContext.Provider>
   );

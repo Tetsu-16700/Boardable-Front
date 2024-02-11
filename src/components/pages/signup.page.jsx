@@ -9,7 +9,11 @@ function SignupPage() {
   return (
     <div className="mt-24 flex  justify-center relative">
       <SignupTemplate></SignupTemplate>
-      {toastInfo.error ? <ToastErrorMolecule message={toastInfo.message}></ToastErrorMolecule> : ""}
+      {toastInfo.error ? (
+        <ToastErrorMolecule message={toastInfo.message}></ToastErrorMolecule>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

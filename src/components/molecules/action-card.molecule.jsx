@@ -1,6 +1,7 @@
 function ActionCardMolecule({ handleEdit, handleDelete }) {
+  // botones que se desplazan al precionar los 3 puntos usados en board
   return (
-    <div className=" absolute bg-white min-w-20 shadow-md rounded-md right-0 mt-1 flex flex-col gap-1 px-2 py-1">
+    <div className=" absolute bg-white min-w-20 shadow-md rounded-md right-0 mt-1 flex flex-col gap-1 px-1 py-1 z-10">
       <span
         onClick={handleEdit}
         role="button"
@@ -11,7 +12,7 @@ function ActionCardMolecule({ handleEdit, handleDelete }) {
       <span
         onClick={handleDelete}
         role="button"
-        className="rounded-md hover:bg-gray-100 p-1"
+        className="rounded-md hover:bg-gray-100 p-1 text-sm"
       >
         Delete
       </span>

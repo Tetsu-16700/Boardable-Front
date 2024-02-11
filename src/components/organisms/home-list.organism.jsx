@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { initialStatus } from "../../hooks/home-hooks.list";
+import { initialStatus } from "../../hooks/home-list.hook";
 
 function HomeListOrganism() {
   // para controlar el boton de los colores

@@ -1,5 +1,8 @@
+// import React from 'react';
+import PropTypes from "prop-types";
+
 function ToastErrorMolecule({ message = "Error in aplication" }) {
-  // mensaje de error
+  // notificacion emergente : mensaje de error
   return (
     <div
       id="toast-warning"
@@ -23,5 +26,10 @@ function ToastErrorMolecule({ message = "Error in aplication" }) {
     </div>
   );
 }
+// Validación de props
+
+ToastErrorMolecule.propTypes = {
+  message: PropTypes.string, 
+};
 
 export default ToastErrorMolecule;

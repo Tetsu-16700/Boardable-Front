@@ -1,11 +1,11 @@
 function LogoAtom({ size = "md" }) {
+  // estructura de logo
   return (
-    
     <span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={size === "md"? "96" : "36"}
-        height={size === "md"? "96" : "36"}
+        width={size === "md" ? "96" : "36"}
+        height={size === "md" ? "96" : "36"}
         viewBox="0 0 96 96"
         fill="none"
       >
