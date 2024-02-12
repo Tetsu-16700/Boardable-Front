@@ -29,5 +29,4 @@ function LogoAtom({ size = "md" }) {
     </span>
   );
 }
-
 export default LogoAtom;

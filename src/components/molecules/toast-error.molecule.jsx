@@ -1,5 +1,5 @@
 // import React from 'react';
-import PropTypes from "prop-types";
+
 
 function ToastErrorMolecule({ message = "Error in aplication" }) {
   // notificacion emergente : mensaje de error
@@ -9,7 +9,7 @@ function ToastErrorMolecule({ message = "Error in aplication" }) {
       className="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow max-h-16 absolute bottom-[-2rem] right-0 mr-10"
       role="alert"
     >
-      <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-white bg-red-600 rounded-lg ">
+      <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-white bg-red-00 rounded-lg ">
         <svg
           className="w-5 h-5"
           aria-hidden="true"
@@ -26,10 +26,6 @@ function ToastErrorMolecule({ message = "Error in aplication" }) {
     </div>
   );
 }
-// Validación de props
 
-ToastErrorMolecule.propTypes = {
-  message: PropTypes.string, 
-};
 
 export default ToastErrorMolecule;

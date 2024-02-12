@@ -5,7 +5,7 @@ import axios from "axios";
 import { baseUrl } from "../../constants/api.constant";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+
 
 function BoardTemplate({ id }) {
   const [color, setColor] = useState("");
@@ -74,8 +74,6 @@ function BoardTemplate({ id }) {
   );
 }
 
-BoardTemplate.propTypes = {
-  id: PropTypes.string.isRequired,
-};
+
 
 export default BoardTemplate;

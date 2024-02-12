@@ -4,7 +4,6 @@ import LogoOptionAtom from "../atoms/logo-option.atom";
 import axios from "axios";
 import { baseUrl } from "../../constants/api.constant";
 import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types";
 
 function BoardHeaderOrganism({ title, id, setTitle }) {
   const navigate = useNavigate();
@@ -85,11 +84,5 @@ function BoardHeaderOrganism({ title, id, setTitle }) {
   );
 }
 
-// Validacion de Props
-BoardHeaderOrganism.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  setTitle: PropTypes.func.isRequired,
-};
 
 export default BoardHeaderOrganism;

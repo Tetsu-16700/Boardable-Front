@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../constants/api.constant";
 import StatusOrganism from "./status.organism";
-import PropTypes from "prop-types";
+
 
 function BoardListOrganism({ id }) {
   const [dataStatus, setDataStatus] = useState([]);
@@ -76,8 +76,6 @@ function BoardListOrganism({ id }) {
   );
 }
 
-BoardListOrganism.propTypes = {
-  id: PropTypes.string.isRequired,
-};
+
 
 export default BoardListOrganism;

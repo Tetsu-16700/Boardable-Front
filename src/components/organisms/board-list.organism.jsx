@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseUrl } from "../../constants/api.constant";
 import StatusOrganism from "./status.organism";
-import PropTypes from "prop-types";
+
 
 function BoardListOrganism({ id }) {
   const [dataStatus, setDataStatus] = useState([]);
-
   const [newTitle, setNewTitle] = useState("");
 
   async function handleCreateList() {
@@ -77,8 +76,6 @@ function BoardListOrganism({ id }) {
     </main>
   );
 }
-BoardListOrganism.propTypes = {
-  id: PropTypes.string.isRequired, // Especifica que id debe ser una cadena y es requerido
-};
+
 
 export default BoardListOrganism;

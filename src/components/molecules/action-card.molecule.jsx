@@ -1,7 +1,7 @@
 function ActionCardMolecule({ handleEdit, handleDelete }) {
   // botones que se desplazan al precionar los 3 puntos usados en board
   return (
-    <div className=" absolute bg-white min-w-20 shadow-md rounded-md right-0 mt-1 flex flex-col gap-1 px-1 py-1 z-10">
+    <div className="absolute bg-white min-w-20 shadow-md rounded-md right-0 mt-1 flex flex-col gap-1 px-1 py-1 z-10">
       <span
         onClick={handleEdit}
         role="button"
