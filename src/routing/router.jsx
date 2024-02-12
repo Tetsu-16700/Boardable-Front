@@ -7,7 +7,7 @@ import AccountPage from "../components/pages/account.page";
 
 export const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     children: [
       {
         path: "/",

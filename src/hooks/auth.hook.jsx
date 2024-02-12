@@ -1,20 +1,21 @@
 import axios from "axios";
+import React, { useContext, useState } from "react";
 import { ToastContext } from "../context/auth-toast.context";
 import { baseUrl } from "../constants/api.constant";
 import { actions_auth } from "../constants/auth.constant";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
 
 export function authHook() {
-    
   const { setErrorToast } = useContext(ToastContext);
+
   const [isLoading, setIsLoading] = useState(true);
+
   const navigate = useNavigate();
+
   const [data, setData] = useState({
     username: "",
     password: "",
   });
-
   // Formulario de eventos
   async function handleSubmit(e, action) {
     e.preventDefault();

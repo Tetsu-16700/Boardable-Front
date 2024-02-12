@@ -9,7 +9,7 @@ function ToastErrorMolecule({ message = "Error in aplication" }) {
       className="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow max-h-16 absolute bottom-[-2rem] right-0 mr-10"
       role="alert"
     >
-      <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-white bg-red-00 rounded-lg ">
+      <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-white bg-red-500 rounded-lg ">
         <svg
           className="w-5 h-5"
           aria-hidden="true"
@@ -21,7 +21,6 @@ function ToastErrorMolecule({ message = "Error in aplication" }) {
         </svg>
         <span className="sr-only">Warning icon</span>
       </div>
-
       <div className="ms-3 text-sm font-normal">{message}</div>
     </div>
   );

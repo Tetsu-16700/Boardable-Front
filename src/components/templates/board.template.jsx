@@ -6,7 +6,6 @@ import { baseUrl } from "../../constants/api.constant";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
 function BoardTemplate({ id }) {
   const [color, setColor] = useState("");
   const [title, setTitle] = useState("");
@@ -73,7 +72,5 @@ function BoardTemplate({ id }) {
     </div>
   );
 }
-
-
 
 export default BoardTemplate;

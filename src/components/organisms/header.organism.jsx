@@ -1,3 +1,4 @@
+import React from "react";
 import LogoAtom from "../atoms/logo.atom";
 import { authHook } from "../../hooks/auth.hook";
 import { Link } from "react-router-dom";
@@ -30,4 +31,5 @@ function HeaderOrganism() {
     </header>
   );
 }
+
 export default HeaderOrganism;

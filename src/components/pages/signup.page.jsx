@@ -5,9 +5,9 @@ import ToastErrorMolecule from "../molecules/toast-error.molecule";
 
 function SignupPage() {
   const { toastInfo } = useContext(ToastContext);
-  // console.log(data);
+
   return (
-    <div className="mt-24 flex  justify-center relative">
+    <div className="mt-24 flex justify-center relative">
       <SignupTemplate></SignupTemplate>
       {toastInfo.error ? (
         <ToastErrorMolecule message={toastInfo.message}></ToastErrorMolecule>

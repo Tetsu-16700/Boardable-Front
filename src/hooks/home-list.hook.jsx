@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-
-export function initialStatus() {
+export function initalStatus() {
   const [paletVisible, setPaletVisible] = useState(false);
 
   const [color, setColor] = useState("bg-slate-200");
@@ -12,7 +11,6 @@ export function initialStatus() {
 
   function handleSelect(newColor) {
     setColor(newColor);
-    // para cerrar la tabla de colores
     setPaletVisible(!paletVisible);
   }
   const optionsColors = [
@@ -25,5 +23,6 @@ export function initialStatus() {
     "bg-[#FBCFE8]",
     "bg-[#DDD6FE]",
   ];
-  return { optionsColors, color, handleClick, handleSelect, paletVisible, };
+
+  return { optionsColors, color, handleClick, handleSelect, paletVisible };
 }

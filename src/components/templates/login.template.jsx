@@ -1,4 +1,4 @@
-// import React from "react";
+
 import BannerAuthTemplate from "./banner-auth.template";
 import FormAuthOrganism from "../organisms/form-auth.organism";
 

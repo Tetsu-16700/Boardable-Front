@@ -1,44 +1,32 @@
-import axios from "axios";
 import { actions_auth } from "../../constants/auth.constant";
-import { ToastContext } from "../../context/auth-toast.context";
-import { useContext } from "react";
+import { authHook } from "../../hooks/auth.hook";
+import { useEffect } from "react";
 
 function FormAuthOrganism({ action = "login" }) {
-  const { setErrorToast } = useContext(ToastContext);
-  // formulario de eventos
-  // funcion que llama a las apis
-  async function handleSubmit(e) {
-    e.proventDefault();
-    if (action === actions_auth.LOGIN) {
-      try {
-        await axios.post("api.../login");
-      } catch (error) {
-        setErrorToast("Login incorrect");
-      }
-    } else if (action === actions_auth.SIGNUP) {
-      try {
-        await axios.post("api.../signup");
-      } catch (error) {
-        setErrorToast("Signup incorrect");
-      }
-    }
-  }
+  const { handleSubmit, data, setData, validateSession } = authHook();
+
+  useEffect(() => {
+    validateSession();
+  }, []);
 
   return (
-    <form className="flex flex-col my-8 gap-4" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col my-8 gap-4"
+      onSubmit={(e) => handleSubmit(e, action)}
+    >
       <div className="flex flex-col">
         <label className="mb-2 font-semibold">Username</label>
-        {/* elemento de entrada  */}
         <input
-          className="px-3 py-2 outline-none border  rounded-md"
+          onChange={(e) => setData({ ...data, username: e.target.value })}
+          className="px-3 py-2 outline-none border rounded-md"
           type="text"
         />
       </div>
-
       <div className="flex flex-col">
         <label className="mb-2 font-semibold">Password</label>
         <input
-          className="px-3 py-2 outline-none border  rounded-md"
+          onChange={(e) => setData({ ...data, password: e.target.value })}
+          className="px-3 py-2 outline-none border rounded-md"
           type="password"
         />
       </div>

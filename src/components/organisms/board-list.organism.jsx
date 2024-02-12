@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+
 import axios from "axios";
 import { baseUrl } from "../../constants/api.constant";
 import StatusOrganism from "./status.organism";
-
+import React, { useEffect, useState } from "react";
 
 function BoardListOrganism({ id }) {
   const [dataStatus, setDataStatus] = useState([]);
+
   const [newTitle, setNewTitle] = useState("");
 
   async function handleCreateList() {
     try {
       if (newTitle === "") {
-        // Validación para asegurar que el título no esté vacío o solo contenga espacios en blanco
         alert("Please enter title");
       } else {
         const headers = {
@@ -76,6 +76,5 @@ function BoardListOrganism({ id }) {
     </main>
   );
 }
-
 
 export default BoardListOrganism;

@@ -11,7 +11,6 @@ export function ToastProvider({ children }) {
     message: "",
   });
 
-  //   eventos
   function setErrorToast(message) {
     setToastInfo({ ...toastInfo, error: true, message });
 

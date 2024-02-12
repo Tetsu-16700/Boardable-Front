@@ -1,9 +1,10 @@
-import FormAccountOrganism from "../organisms/form-account.organism";
+
 import HeaderOrganism from "../organisms/header.organism";
+import FormAccountOrganism from "../organisms/form-account.organism";
 
 function AccountTemplate() {
   return (
-    <div>
+    <div className="">
       <HeaderOrganism></HeaderOrganism>
       <div className=" flex justify-center w-full">
         <div className="max-w-md mt-16">
